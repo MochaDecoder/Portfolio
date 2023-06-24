@@ -1,39 +1,37 @@
-import fs from 'fs'
-import matter from 'gray-matter'
-import md from 'markdown-it'
+import MarkdownIt from 'markdown-it'
+
+import { getAllPosts, getPostBySlug } from '@/pages/lib/api';
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync('./public/mockup');
+  const posts = getAllPosts();
 
-  const paths = files.map((fileName) => ({
-    params: {
-      slug: fileName.replace('.md', ''),
-    },
-  }));
   return {
-    paths,
+    paths: posts.map((post) => {
+      return {
+        params: {
+          slug: post.slug,
+        },
+      };
+    }),
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const fileName = fs.readFileSync(`./public/mockup/${params.slug}.md`, 'utf-8');
-  const { data: frontmatter, content } = matter(fileName);
+  const post = getPostBySlug(params.slug);
   return {
-    props: {
-      frontmatter,
-      content,
-    },
+    props: post,
   };
 }
 
 export default function PostPage({ frontmatter, content }: { frontmatter: { title: string }, content: string }) {
+  const md = new MarkdownIt();
   return (
     <section className='px-6'>
       <div className='max-w-4xl mx-auto py-12'>
         <div className='mx-auto'>
           <h1>{frontmatter.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+          <div dangerouslySetInnerHTML={{ __html: md.render(content) }} />
         </div>
       </div>
     </section>

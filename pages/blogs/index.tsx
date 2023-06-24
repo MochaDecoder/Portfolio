@@ -1,9 +1,7 @@
 import Head from 'next/head';
 
-import fs from 'fs'
-import matter from "gray-matter";
-
 import Post from '../../components/posts/post';
+import { getAllPosts } from '../lib/api';
 
 interface Post {
   slug: string
@@ -11,7 +9,6 @@ interface Post {
 }
 
 export default function Blogs({ posts }: { posts: Post[] }) {
-  console.log(posts)
   return (
     <div>
       <Head>
@@ -34,17 +31,7 @@ export default function Blogs({ posts }: { posts: Post[] }) {
 }
 
 export async function getStaticProps() {
-  const files = fs.readdirSync('./public/mockup');
-
-  const posts = files.map((fileName) => {
-    const slug = fileName.replace('.md', '');
-    const readFile = fs.readFileSync(`./public/mockup/${fileName}`, 'utf-8');
-    const { data: frontmatter } = matter(readFile);
-    return {
-      slug,
-      ...frontmatter,
-    };
-  });
+  const posts = getAllPosts();
 
   return {
     props: {

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Post({ post, className = 'rounded-lg' }: { post: { slug: string, [key: string]: string | string[] }, className: string }) {
+export default function Post({ post, className = 'rounded-lg' }: { post: { slug: string, [key: string]: string | string[] }, className?: string }) {
   return (
     <article className={`bg-white p-4 ${className}`}>
       <Link href={`/blogs/${post.slug}`}>
