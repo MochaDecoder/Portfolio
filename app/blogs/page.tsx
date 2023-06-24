@@ -5,8 +5,13 @@ import matter from "gray-matter";
 
 import Post from '../components/posts/post';
 
+interface Post {
+  slug: string
+  [key: string]: string
+}
+
 export default async function Blogs() {
-  const posts = await getPosts()
+  const posts: Post[] = await getPosts()
   return (
     <div>
       <Head>
@@ -31,7 +36,7 @@ export default async function Blogs() {
 export async function getPosts() {
   const files = fs.readdirSync('./public/mockup');
 
-  const posts = files.map((fileName) => {
+  const posts: Post[] = files.map((fileName) => {
     const slug = fileName.replace('.md', '');
     const readFile = fs.readFileSync(`./public/mockup/${fileName}`, 'utf-8');
     const { data: frontmatter } = matter(readFile);

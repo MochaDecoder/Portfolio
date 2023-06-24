@@ -1,5 +1,5 @@
-import Post from "./post";
 import SectionHeader from "../sectionHeader";
+import Post from "./post";
 
 export default function Posts() {
   return (
