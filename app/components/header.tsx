@@ -1,4 +1,11 @@
+'use client'
+import Link from "next/link";
+import { usePathname } from 'next/navigation'
+
+
 export default function Header() {
+  const pathName = usePathname()
+  const routes = ['blogs', 'works', 'contact']
   return (
     <header className="container mx-auto flex justify-between h-24 items-center"
     >
@@ -25,15 +32,13 @@ export default function Header() {
       </a>
       <nav>
         <ul className="flex gap-6 font-medium">
-          <li>
-            <a href='#'>Blog</a>
-          </li>
-          <li>
-            <a href='#'>Work</a>
-          </li>
-          <li>
-            <a href='#'>Contact</a>
-          </li>
+          {routes.map((route) => {
+            return (
+              <li key={route}>
+                <Link href={`${route.toLowerCase()}`} className={`hover:underline ${pathName.toLowerCase() === `/${route.toLowerCase()}` && 'text-red-400'}`}>{route}</Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </header>
