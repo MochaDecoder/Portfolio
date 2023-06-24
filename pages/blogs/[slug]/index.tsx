@@ -3,7 +3,7 @@ import matter from 'gray-matter'
 import md from 'markdown-it'
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync('./posts');
+  const files = fs.readdirSync('./public/mockup');
 
   const paths = files.map((fileName) => ({
     params: {
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const fileName = fs.readFileSync(`./posts/${params.slug}.md`, 'utf-8');
+  const fileName = fs.readFileSync(`./public/mockup/${params.slug}.md`, 'utf-8');
   const { data: frontmatter, content } = matter(fileName);
   return {
     props: {
