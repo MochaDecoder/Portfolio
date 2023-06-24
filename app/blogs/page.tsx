@@ -1,7 +1,12 @@
 import Head from 'next/head';
+
+import fs from 'fs'
+import matter from "gray-matter";
+
 import Post from '../components/posts/post';
 
-export default function Blogs() {
+export default async function Blogs() {
+  const posts = await getPosts()
   return (
     <div>
       <Head>
@@ -12,12 +17,29 @@ export default function Blogs() {
       <section className='px-6'>
         <div className='max-w-4xl mx-auto'>
           <h1 className='text-3xl font-bold mb-6'>Blog</h1>
-          <Post className='border-b-2' />
-          <Post className='border-b-2' />
-          <Post className='border-b-2' />
-          <Post className='border-b-2' />
+          {
+            posts.map((post) => (
+              <Post key={post.slug} className='border-b-2' post={post} />
+            ))
+          }
         </div>
       </section>
     </div>
   );
+}
+
+export async function getPosts() {
+  const files = fs.readdirSync('./public/mockup');
+
+  const posts = files.map((fileName) => {
+    const slug = fileName.replace('.md', '');
+    const readFile = fs.readFileSync(`./public/mockup/${fileName}`, 'utf-8');
+    const { data: frontmatter } = matter(readFile);
+    return {
+      slug,
+      ...frontmatter,
+    };
+  });
+
+  return posts
 }
