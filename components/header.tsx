@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="container mx-auto flex justify-between h-24 items-center px-6 md:px-0"
     >
-      <a href='/'>
+      <Link href='/'>
         <svg
           aria-label='Daily Dev Tips logo'
           xmlns='http://www.w3.org/2000/svg'
@@ -29,7 +29,7 @@ export default function Header() {
             fill='rgb(0,185,232)'
           ></path>
         </svg>
-      </a>
+      </Link>
       <nav>
         <ul className="flex gap-6 font-medium">
           {routes.map((route) => {

@@ -5,9 +5,9 @@ export default function Work() {
       <div>
         <h3 className="text-2xl mb-2 font-medium">Work title</h3>
         <span className="text-gray-600 mb-4 block">
-          <date className="bg-indigo-500 text-white px-5 py-1.5 mr-4 rounded-xl">
+          <div className="bg-indigo-500 text-white px-5 py-1.5 mr-4 rounded-xl w-[80px]">
             2022
-          </date>
+          </div>
           Dashboard
         </span>
         <p>

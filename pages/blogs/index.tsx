@@ -5,12 +5,12 @@ import matter from "gray-matter";
 
 import Post from '../../components/posts/post';
 
-// interface Post {
-//   slug: string
-//   [key: string]: string
-// }
+interface Post {
+  slug: string
+  [key: string]: string
+}
 
-export default function Blogs({ posts }) {
+export default function Blogs({ posts }: { posts: Post[] }) {
   console.log(posts)
   return (
     <div>

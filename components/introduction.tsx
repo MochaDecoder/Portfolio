@@ -4,7 +4,7 @@ export default function Introduction() {
       <div className="max-w-4xl mx-auto flex gap-14 flex-col-reverse md:flex-row">
         <div>
           <h1 className="text-3xl font-bold mb-6">
-            Hi, I'm Ong!
+            Hi, I am Ong!
             <br />
             Full Stack Developer
           </h1>

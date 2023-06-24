@@ -16,8 +16,8 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params: { slug } }) {
-  const fileName = fs.readFileSync(`./posts/${slug}.md`, 'utf-8');
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+  const fileName = fs.readFileSync(`./posts/${params.slug}.md`, 'utf-8');
   const { data: frontmatter, content } = matter(fileName);
   return {
     props: {
@@ -27,7 +27,7 @@ export async function getStaticProps({ params: { slug } }) {
   };
 }
 
-export default function PostPage({ frontmatter, content }) {
+export default function PostPage({ frontmatter, content }: { frontmatter: { title: string }, content: string }) {
   return (
     <section className='px-6'>
       <div className='max-w-4xl mx-auto py-12'>
