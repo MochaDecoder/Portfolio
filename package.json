@@ -17,6 +17,7 @@
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "gray-matter": "^4.0.3",
+    "markdown-it": "^13.0.1",
     "next": "13.4.7",
     "postcss": "8.4.24",
     "react": "18.2.0",
@@ -27,6 +28,8 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/markdown-it": "^12.2.3",
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",

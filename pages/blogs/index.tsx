@@ -3,15 +3,15 @@ import Head from 'next/head';
 import fs from 'fs'
 import matter from "gray-matter";
 
-import Post from '../components/posts/post';
+import Post from '../../components/posts/post';
 
-interface Post {
-  slug: string
-  [key: string]: string
-}
+// interface Post {
+//   slug: string
+//   [key: string]: string
+// }
 
-export default async function Blogs() {
-  const posts: Post[] = await getPosts()
+export default function Blogs({ posts }) {
+  console.log(posts)
   return (
     <div>
       <Head>
@@ -33,12 +33,12 @@ export default async function Blogs() {
   );
 }
 
-export async function getPosts() {
-  const files = fs.readdirSync('./public/mockup');
+export async function getStaticProps() {
+  const files = fs.readdirSync('./posts');
 
-  const posts: Post[] = files.map((fileName) => {
+  const posts = files.map((fileName) => {
     const slug = fileName.replace('.md', '');
-    const readFile = fs.readFileSync(`./public/mockup/${fileName}`, 'utf-8');
+    const readFile = fs.readFileSync(`./posts/${fileName}`, 'utf-8');
     const { data: frontmatter } = matter(readFile);
     return {
       slug,
@@ -46,5 +46,9 @@ export async function getPosts() {
     };
   });
 
-  return posts
+  return {
+    props: {
+      posts,
+    },
+  };
 }

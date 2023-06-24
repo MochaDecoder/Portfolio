@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Work from '../components/works/work';
+import Work from '../../components/works/work';
 
 export default function Works() {
   return (
