@@ -1,7 +1,7 @@
 export default function Introduction() {
   return (
     <header className="px-6">
-      <div className="max-w-4xl mx-auto flex gap-14">
+      <div className="max-w-4xl mx-auto flex gap-14 flex-col-reverse md:flex-row">
         <div>
           <h1 className="text-3xl font-bold mb-6">
             Hi, I'm Ong!
