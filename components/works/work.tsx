@@ -14,8 +14,8 @@ export default function Work({ item }: { item: WorkType }) {
           </time>
           {item.category}
         </span>
-        <p>{item.description}</p>
+        <p className='line-clamp-3'>{item.description}</p>
       </div>
     </article>
-  );
+  )
 }

@@ -19,9 +19,8 @@ export default function Works({ works }: { works: Work[] }) {
           {works.map((workItem) => (
             <Work key={workItem.title} item={workItem} />
           ))}
-          ;
         </div>
       </div>
     </section>
-  );
+  )
 }
