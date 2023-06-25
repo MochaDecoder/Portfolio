@@ -1,18 +1,84 @@
 {
   "work": [
     {
-      "title": "Example piece one",
-      "image": "https://placedog.net/500",
-      "year": 2022,
-      "category": "Dashboard",
-      "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      "slug": "icao_aaitf18",
+      "title": "ICAO Meeting - AAITF/18",
+      "image": "/assets/icao_aaitf.png",
+      "imageList": ["icao_aaitf.png"],
+      "skills": [],
+      "year": "2023-06-19",
+      "category": "Meeting",
+      "description": "I have participated in the ​Eighteenth Meeting of the ICAO Aeronautical Information Services − Aeronautical InformationManagement Implementation Task Force (AAITF/18) Bangkok, Thailand, between 19 - 23 June 2023 meeting as an Aeronautical Information Service (AIS) representative of the organization to follow up on the work and progress of the APAC region, discuss issues, and exchange knowledge with other countries."
     },
     {
-      "title": "Example piece two",
-      "image": "https://placedog.net/500",
-      "year": 2022,
-      "category": "Backend",
-      "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+      "slug": "mrtbo",
+      "title": "MRTBO - Multi Regional Trajectory Based Operations",
+      "image": "/assets/mrtbo_5.jpg",
+      "imageList": ["mrtbo_1.png", "mrtbo_2.png", "mrtbo_3.jpg", "mrtbo_4.jpg", "mrtbo_5.jpg"],
+      "skills": [],
+      "year": "2023-06-15",
+      "category": "Demonstration, Meeting",
+      "description": "I have participated as a representative of the Aerothai core team in testing the exchange of aviation information in digital format in the MRTBO project. Trajectory-Based Operation or TBO is a new concept in air traffic management that transitions from voice communication to digital information exchange through automated systems. In this approach, Air Navigation Service Providers (ANSPs) and airlines plan their flights together along the route, through the exchange of necessary and beneficial information for decision making via interconnected automated systems. The Aerothai has developed a system to participate in testing and demonstrating flights following the TBO concept. Participating entities include the Federal Aviation Administration (FAA), the Japan Civil Aviation Bureau (JCAB), the Civil Aviation Authority of Singapore (CAAS), and Boeing. The demonstration flight started from Seattle to Tokyo, then flew from Tokyo via Bangkok to land in Singapore. Subsequently, it flew from Singapore to land in Bangkok and then flew back to Seattle. This demonstration is the first flight following the TBO concept that covers multiple regions. The demonstration results will be presented to the ICAO for information to be used in the development and standardization of both technical and practical aspects globally."
+    },
+    {
+      "slug": "swim_asean",
+      "title": "SWIM in ASEAN Demonstration",
+      "image": "/assets/swim_asean.jpeg",
+      "imageList": ["swim_asean.jpeg", "swim_asean1.jpeg", "swim_asean2.jpeg", "swim_asean3.jpeg"],
+      "skills": [],
+      "year": "2019-11-12",
+      "category": "Demonstration, Meeting",
+      "description": "I have participated as a representative in the SWIM in ASEAN Demonstration project, which is a test of exchanging aviation information in a standardized format (AIXM, FIXM, IWXXM). This demonstration is aimed at developing capabilities in Air Traffic Management (ATM), encompassing the development of system-wide information management (SWIM). It signifies our readiness to take proactive actions in the regional stage as a company, and serves as an exchange of SWIM management concepts, demonstrating the benefits that can be gained for ASEAN and the Asia-Pacific region, in order to provide sustainable high-quality aviation services."
+    },
+    {
+      "slug": "enotam",
+      "title": "E-NOTAM",
+      "image": "/assets/enotam_0.png",
+      "imageList": ["enotam_0.png", "enotam_1.png", "enotam_2.png", "enotam_3.png", "enotam_4.png"],
+      "skills": [],
+      "year": "2022-06-30",
+      "category": "Company Project",
+      "description": "I have participated in the development of the ENOTAM or Electronic NOTAM website to support operational departments, namely the Flight Data Operators (FDO) and Air Traffic Controllers (ATC). Since the Aerothai messaging system receives more than 100,000 messages per day, it's challenging and time-consuming for FDOs to filter out NOTAM messages for preparation and delivery to ATCs across various control towers. The ENOTAM system helps solve the problem of message filtering and distribution, making it easier. The system has a customizable filter according to user requirements, and it also allows for editing and altering messages through a web form, eliminating the need for paper data. Moreover, it has a well-controlled and organized workflow for processing/approving messages before they are displayed on the ATC screens at the control towers. The system also alerts when new messages arrive, ensuring users don't miss any messages coming into the system, thereby enhancing efficiency and significantly reducing work time."
+    },
+    {
+      "slug": "uav",
+      "title": "UAV Project",
+      "image": "/assets/uav_1.png",
+      "imageList": ["uav_1.png", "uav_2.png"],
+      "skills": [],
+      "year": "2022-03-31",
+      "category": "Innovation",
+      "description": "I have participated in the development of the system to connect with UAVs (Unmanned Aerial Vehicles) and extract telemetry data from them to display the UAVs' positions on a map and alert when the UAV enters a restricted zone. This data is also stored in a time-series database for further display on monitoring tools."
+    },
+    {
+      "slug": "digital_notam",
+      "title": "Digital NOTAM",
+      "image": "/assets/dnotam_0.png",
+      "imageList": ["dnotam_0.png", "dnotam_1.png", "dnotam_2.png", "dnotam_3.png", "dnotam_4.png"],
+      "skills": [],
+      "year": "2020-12-31",
+      "category": "Company Project",
+      "description": "I have participated in the development of the Digital NOTAM system in the format of AIXM 5.1, evolving from the old NOTAM format to a new global exchangeable format. This allows for easy integration with other aviation information, and can be accessed via an API by other systems. Furthermore, Due to the fully structured data, it's easier to manage the data and address the inconsistency issues of NOTAMs within the organization."
+    },
+    {
+      "slug": "notamthai",
+      "title": "NOTAM Thai Website",
+      "image": "/assets/notam_0.png",
+      "imageList": ["notam_0.png", "notam_1.png", "notam_2.png", "notam_3.png", "notam_4.png"],
+      "skills": [],
+      "year": "2021-12-31",
+      "category": "Company Project",
+      "description": "I have participated in the development of the NOTAM Thai Website, a system used for searching NOTAMs, SNOWTAMs, and ASHTAMs. It can display results in a graphical format on a map, along with other static data like airports, routes, or navaids. Additionally, it can prepare a PIB or current Notam List in a PDF format for further use. This system is open to the public and available to all organizations related to aviation."
+    },
+    {
+      "slug": "selfbriefing",
+      "title": "Self Briefing",
+      "image": "/assets/sb_0.png",
+      "imageList": ["sb_0.png", "sb_1.png", "sb_2.png", "sb_3.png", "sb_4.png", "sb_5.png"],
+      "skills": [],
+      "year": "2019-12-31",
+      "category": "Company Project",
+      "description": "I have participated in the development of the self-briefing system to support operational units such as ATCs (Air Traffic Controllers). This enables ATCs to prepare before starting their shift by accessing relevant information such as NOTAMs, SNOWTAMs, VIPs, mandatory documents, or various announcements that they need to be aware of. It also allows tracking of user license information, including the status of the license and when it needs to be renewed. The system efficiently manages user data, with various levels for dividing work responsibilities and access rights to data or different pages. Furthermore, it keeps logs of various user activities for future reference."
     }
   ]
 }

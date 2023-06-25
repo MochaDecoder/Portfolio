@@ -1,0 +1,165 @@
+{
+  "skill": [
+    {
+      "title": "TypeScript",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Programming Language", "Frontend", "Backend"],
+      "percent": 90,
+      "status": "success"
+    },
+    {
+      "title": "JavaScript",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Programming Language", "Frontend", "Backend"],
+      "percent": 88,
+      "status": "success"
+    },
+    {
+      "title": "Angular",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Framework", "Frontend"],
+      "percent": 86,
+      "status": "success"
+    },
+    {
+      "title": "React",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Frontend"],
+      "percent": 85,
+      "status": "success"
+    },
+    {
+      "title": "NextJS",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Framework", "Frontend", "Backend"],
+      "percent": 85,
+      "status": "success"
+    },
+    {
+      "title": "NodeJS",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Environment", "Frontend", "Backend"],
+      "percent": 80,
+      "status": "success"
+    },
+    {
+      "title": "TailwindCSS",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Tools", "Frontend"],
+      "percent": 80,
+      "status": "success"
+    },
+    {
+      "title": "Express",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Framework", "Backend"],
+      "percent": 75,
+      "status": "success"
+    },
+    {
+      "title": "MongoDB",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Database"],
+      "percent": 75,
+      "status": "success"
+    },
+    {
+      "title": "PostgreSQL",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Database"],
+      "percent": 74,
+      "status": "success"
+    },
+    {
+      "title": "SQL",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Programming Language"],
+      "percent": 70,
+      "status": "success"
+    },
+    {
+      "title": "C#",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Programming Language", "Frontend", "Backend"],
+      "percent": 70,
+      "status": "success"
+    },
+    {
+      "title": ".NET",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Framework", "Frontend", "Backend"],
+      "percent": 70,
+      "status": "success"
+    },
+    {
+      "title": "REST",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Backend"],
+      "percent": 70,
+      "status": "success"
+    },
+    {
+      "title": "Bootstrap",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Tools", "Frontend"],
+      "percent": 68,
+      "status": "success"
+    },
+    {
+      "title": "Java",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Programming Language", "Backend"],
+      "percent": 60,
+      "status": "error"
+    },
+    {
+      "title": "SpringBoot",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Framework", "Backend"],
+      "percent": 58,
+      "status": "error"
+    },
+    {
+      "title": "Python",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Programming Language", "Frontend", "Backend"],
+      "percent": 55,
+      "status": "error"
+    },
+    {
+      "title": "Docker",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Tools"],
+      "percent": 55,
+      "status": "error"
+    },
+    {
+      "title": "Kubernetes",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Tools"],
+      "percent": 55,
+      "status": "error"
+    },
+    {
+      "title": "Grafana",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Tools"],
+      "percent": 55,
+      "status": "error"
+    },
+    {
+      "title": "AMQP",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Tools"],
+      "percent": 54,
+      "status": "active"
+    },
+    {
+      "title": "ML",
+      "image": "/assets/icao_aaitf.png",
+      "category": ["Tools"],
+      "percent": 40,
+      "status": "active"
+    }
+  ]
+}
