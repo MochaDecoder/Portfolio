@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Introduction() {
   return (
     <header className="px-6">
@@ -17,7 +19,7 @@ export default function Introduction() {
         </div>
         <span className="m-5 inline-block before:w-full before:aspect-square before:-left-2.5 before:top-2.0 before:block before:absolute before:bg-indigo-300 relative z-0 before:rounded-full"
         >
-          <img src='/assets/profile.jpg'
+          <Image src='/assets/profile.jpg'
             width="240"
             height="240"
             alt="Image of Myself"
