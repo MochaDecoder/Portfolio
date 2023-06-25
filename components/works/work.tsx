@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { WorkType } from "@/pages/lib/api";
+import { WorkType } from "@/lib/api";
 
 export default function Work({ item }: { item: WorkType }) {
   return (

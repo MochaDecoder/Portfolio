@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import Post from '../../components/posts/post';
-import { getAllPosts } from '../lib/api';
+import { getAllPosts } from '../../lib/api';
 
 interface Post {
   slug: string

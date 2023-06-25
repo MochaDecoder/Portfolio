@@ -1,6 +1,6 @@
 import MarkdownIt from 'markdown-it'
 
-import { getAllPosts, getPostBySlug } from '@/pages/lib/api';
+import { getAllPosts, getPostBySlug } from '@/lib/api';
 
 export async function getStaticPaths() {
   const posts = getAllPosts();

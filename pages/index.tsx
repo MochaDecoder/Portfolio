@@ -2,7 +2,7 @@ import Head from 'next/head'
 import IntroHeader from "../components/introduction";
 import RecentPosts from "../components/posts/posts";
 import FeaturedWork from "../components/works/works";
-import { getAllPosts, getAllWork, WorkType } from './lib/api';
+import { getAllPosts, getAllWork, WorkType } from '../lib/api';
 
 interface Post {
   slug: string

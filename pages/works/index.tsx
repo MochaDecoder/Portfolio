@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Work from '../../components/works/work';
-import { getAllWork, WorkType } from '../lib/api';
+import { getAllWork, WorkType } from '../../lib/api';
 
 export async function getStaticProps() {
   const works = getAllWork();
