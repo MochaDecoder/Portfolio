@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 
 export default function Header() {
   const pathName = usePathname()
-  const routes = ['blogs', 'works', 'contact']
+  const routes = ['skills', 'works', 'contact']
   return (
     <header className="container mx-auto flex justify-between h-24 items-center px-6 md:px-0"
     >

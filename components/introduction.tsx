@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Introduction() {
   return (
@@ -15,7 +16,7 @@ export default function Introduction() {
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet.
           </p>
-          <a href='#' className="bg-indigo-500 hover:bg-black transition text-white px-6 py-3 text-lg rounded">Check my work</a>
+          <Link href='/works' className="bg-indigo-500 hover:bg-black transition text-white px-6 py-3 text-lg rounded">Check my work</Link>
         </div>
         <span className="m-5 inline-block before:w-full before:aspect-square before:-left-2.5 before:top-2.0 before:block before:absolute before:bg-indigo-300 relative z-0 before:rounded-full"
         >
