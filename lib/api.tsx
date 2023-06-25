@@ -11,6 +11,14 @@ export interface WorkType {
   description: string
 }
 
+interface Skill {
+  title: string
+  image: string
+  percent: number
+  status: string
+  category: Array<string>
+}
+
 export function getAllPosts() {
   const files = fs.readdirSync('./public/mockup');
   const posts = files
@@ -47,4 +55,10 @@ export function getWorkBySlug(slug: string): WorkType {
   const data = fs.readFileSync('./public/work/works.json', 'utf-8');
   const jsonData = JSON.parse(data);
   return jsonData.work.filter((work: WorkType) => work.slug === slug)?.at(0)
+}
+
+export function getAllSkill() {
+  const data = fs.readFileSync('./public/skill/skills.json', 'utf-8');
+  const jsonData = JSON.parse(data);
+  return jsonData.skill.sort((skill1: Skill, skill2: Skill) => (skill1.percent > skill2.percent ? -1 : 1))
 }
