@@ -2,14 +2,19 @@ import Head from 'next/head'
 import IntroHeader from "../components/introduction";
 import RecentPosts from "../components/posts/posts";
 import FeaturedWork from "../components/works/works";
-import { getAllPosts } from './lib/api';
+import { getAllPosts, getAllWork, WorkType } from './lib/api';
 
 interface Post {
   slug: string
   [key: string]: string
 }
 
-export default function Home({ posts }: { posts: Post[] }) {
+interface Props {
+  posts: Post[]
+  works: WorkType[]
+}
+
+export default function Home({ posts, works }: Props) {
   return (
     <div>
       <Head>
@@ -19,17 +24,19 @@ export default function Home({ posts }: { posts: Post[] }) {
       </Head>
       <IntroHeader />
       <RecentPosts posts={posts} />
-      <FeaturedWork />
+      <FeaturedWork works={works} />
     </div>
   )
 }
 
 export async function getStaticProps() {
   const posts = getAllPosts();
+  const works = getAllWork();
 
   return {
     props: {
       posts,
+      works
     },
   };
 }

@@ -1,7 +1,17 @@
 import Head from 'next/head';
 import Work from '../../components/works/work';
+import { getAllWork, WorkType } from '../lib/api';
 
-export default function Works() {
+export async function getStaticProps() {
+  const works = getAllWork();
+
+  return {
+    props: {
+      works,
+    },
+  };
+}
+export default function Works({ works }: { works: WorkType[] }) {
   return (
     <div>
       <Head>
@@ -12,10 +22,9 @@ export default function Works() {
       <section className='px-6'>
         <div className='max-w-4xl mx-auto'>
           <h1 className='text-3xl font-bold mb-6'>Works</h1>
-          <Work />
-          <Work />
-          <Work />
-          <Work />
+          {works.map((workItem) => (
+            <Work key={workItem.title} item={workItem} />
+          ))};
         </div>
       </section>
     </div>

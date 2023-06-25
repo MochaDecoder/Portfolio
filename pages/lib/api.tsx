@@ -1,5 +1,13 @@
 import * as fs from 'fs';
 import matter from 'gray-matter';
+export interface WorkType {
+  title: string
+  image: string
+  year: string
+  category: string
+  description: string
+  [key: string]: string
+}
 
 export function getAllPosts() {
   const files = fs.readdirSync('./public/mockup');
@@ -25,4 +33,10 @@ export function getPostBySlug(slug: string) {
     frontmatter,
     content,
   };
+}
+
+export function getAllWork() {
+  const data = fs.readFileSync('./public/work/works.json', 'utf-8');
+  const jsonData = JSON.parse(data);
+  return jsonData.work;
 }
