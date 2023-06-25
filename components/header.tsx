@@ -34,7 +34,7 @@ export default function Header() {
           {routes.map((route) => {
             return (
               <li key={route}>
-                <Link href={`${route.toLowerCase()}`} className={`hover:underline ${pathName.toLowerCase() === `/${route.toLowerCase()}` && 'text-red-400'}`}>{route}</Link>
+                <Link href={`${route.toLowerCase()}`} className={`hover:underline ${pathName.toLowerCase() === `/${route.toLowerCase()}` && 'text-indigo-400'}`}>{route}</Link>
               </li>
             );
           })}

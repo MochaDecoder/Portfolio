@@ -21,12 +21,14 @@ export default function Works({ works }: { works: WorkType[] }) {
       </Head>
       <section className='px-6'>
         <div className='max-w-4xl mx-auto'>
-          <h1 className='text-3xl font-bold mb-6'>Works</h1>
+          <div className='p-3 border bg-indigo-500 rounded-md shadow-md mb-4'>
+            <h1 className='text-3xl font-bold text-yellow-200'>My Works</h1>
+          </div>
           {works.map((workItem) => (
             <Work key={workItem.title} item={workItem} />
-          ))};
+          ))}
         </div>
       </section>
     </div>
-  );
+  )
 }

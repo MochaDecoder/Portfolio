@@ -16,7 +16,9 @@ export default function Skills({ skills }: { skills: Skill[] }) {
       </Head>
       <section className='px-6'>
         <div className='max-w-4xl mx-auto'>
-          <h1 className='text-3xl font-bold mb-6'>Skill</h1>
+          <div className='p-3 border bg-indigo-500 rounded-md shadow-md mb-4'>
+            <h1 className='text-3xl font-bold text-yellow-200'>My Skills</h1>
+          </div>
           {
             skills.map((skill, i) => (
               <div key={i} className='flex flex-row justify-between items-center'>
