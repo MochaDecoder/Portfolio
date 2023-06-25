@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import IntroHeader from "../components/introduction";
-import RecentPosts from "../components/posts/posts";
+import FeaturedSkill from '@/components/skills';
 import FeaturedWork from "../components/works/works";
-import { getAllPosts, getAllWork, WorkType } from '../lib/api';
+import { getAllWork, WorkType, Skill, getAllSkill } from '../lib/api';
 
 interface Post {
   slug: string
@@ -10,11 +10,11 @@ interface Post {
 }
 
 interface Props {
-  posts: Post[]
+  skills: Skill[]
   works: WorkType[]
 }
 
-export default function Home({ posts, works }: Props) {
+export default function Home({ skills, works }: Props) {
   return (
     <div>
       <Head>
@@ -23,19 +23,19 @@ export default function Home({ posts, works }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <IntroHeader />
-      <RecentPosts posts={posts} />
+      <FeaturedSkill skills={skills} />
       <FeaturedWork works={works} />
     </div>
   )
 }
 
 export async function getStaticProps() {
-  const posts = getAllPosts();
+  const skills = getAllSkill();
   const works = getAllWork();
 
   return {
     props: {
-      posts,
+      skills,
       works
     },
   };

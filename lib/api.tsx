@@ -11,7 +11,7 @@ export interface WorkType {
   description: string
 }
 
-interface Skill {
+export interface Skill {
   title: string
   image: string
   percent: number
