@@ -1,12 +1,14 @@
 import * as fs from 'fs';
 import matter from 'gray-matter';
 export interface WorkType {
+  slug: string
   title: string
   image: string
+  imageList: Array<string>
+  skills: Array<string>
   year: string
   category: string
   description: string
-  [key: string]: string
 }
 
 export function getAllPosts() {
@@ -38,5 +40,11 @@ export function getPostBySlug(slug: string) {
 export function getAllWork() {
   const data = fs.readFileSync('./public/work/works.json', 'utf-8');
   const jsonData = JSON.parse(data);
-  return jsonData.work;
+  return jsonData.work.sort((work1: WorkType, work2: WorkType) => (work1.year > work2.year ? -1 : 1))
+}
+
+export function getWorkBySlug(slug: string): WorkType {
+  const data = fs.readFileSync('./public/work/works.json', 'utf-8');
+  const jsonData = JSON.parse(data);
+  return jsonData.work.filter((work: WorkType) => work.slug === slug)?.at(0)
 }

@@ -1,16 +1,8 @@
 import SectionHeader from '../sectionHeader';
 import Work from './work';
+import { WorkType } from '@/lib/api';
 
-interface Work {
-  title: string
-  image: string
-  year: string
-  category: string
-  description: string
-  [key: string]: string
-}
-
-export default function Works({ works }: { works: Work[] }) {
+export default function Works({ works }: { works: WorkType[] }) {
   return (
     <section className='px-6'>
       <div className='max-w-4xl mx-auto py-12'>
