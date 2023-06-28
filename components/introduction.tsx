@@ -12,9 +12,7 @@ export default function Introduction() {
             Full Stack Developer
           </h1>
           <p className="text-lg mb-6">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.
+            I have more than 6 years of experience in Frontend and Backend website development. Capable of analyzing, designing, and developing systems from start to finish. I am always eager to learn new technologies. Special Interest with web3 and blockchain technology, I wish to work with an organization that values technology and includes people who are enthusiastic about technology.
           </p>
           <Link href='/works' className="bg-indigo-500 hover:bg-black transition text-white px-6 py-3 text-lg rounded">Check my work</Link>
         </div>
